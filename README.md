@@ -1,2 +1,2 @@
 # book-bot-boot.dev
-project for boot.dev list amount of numbers in a book
+BookBot is my first [Boot.dev](https://www.boot.dev) project!
