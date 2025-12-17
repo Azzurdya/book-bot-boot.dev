@@ -1,4 +1,8 @@
+import sys
+
 from stats import letter_count, split_count
+
+len_sys = 0
 
 
 def get_book_txt(file_path):
@@ -13,8 +17,7 @@ def sort_format(letter_dictionary):
         print(f"{i}: {letter_dictionary[i]}")
 
 
-def main():
-    file_path = "books/frankenstein.txt"
+def main(file_path):
     book_string = get_book_txt(file_path)
     book_word_count = split_count(book_string)
     letter_dictionary = letter_count(book_string)
@@ -26,4 +29,12 @@ def main():
     sort_format(letter_dictionary)
 
 
-main()
+print(sys.argv)
+
+len_sys = len(sys.argv)
+
+if len_sys != 2:
+    print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
+elif len_sys == 2:
+    main(sys.argv[1])
