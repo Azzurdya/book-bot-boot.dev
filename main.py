@@ -11,13 +11,15 @@ def get_book_txt(file_path):
 
 def split_count(book_string):
     book_string = book_string.split()
-    for book_string in RANGE(1, 10):
-        print(book_string)
+    book_count = len(book_string)
+    return book_count
 
 
 def main():
     file_path = "books/frankenstein.txt"
     book_string = get_book_txt(file_path)
+    book_word_list = split_count(book_string)
+    return book_word_list
 
 
-main()
+print(main())
