@@ -18,7 +18,11 @@ def main():
     book_string = get_book_txt(file_path)
     book_word_count = split_count(book_string)
     letter_dictionary = letter_count(book_string)
+    print("============ BOOKBOT ============")
+    print(f"Analyzing book found at {file_path}...")
+    print("----------- Word Count ----------")
     print(f"Found {book_word_count} total words")
+    print("--------- Character Count -------")
     sort_format(letter_dictionary)
 
 
