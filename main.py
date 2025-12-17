@@ -1,4 +1,5 @@
 import sys
+from pathlib import Path
 
 from stats import letter_count, split_count
 
@@ -13,11 +14,14 @@ def get_book_txt(file_path):
 
 
 def sort_format(letter_dictionary):
-    for i in letter_dictionary:
-        print(f"{i}: {letter_dictionary[i]}")
+    for ch, count in sorted(letter_dictionary.items()):
+        print(f"{ch}: {count}")
 
 
 def main(file_path):
+    # print(raw_path)
+    # file_path = Path(raw_path)
+    # print(file_path)
     book_string = get_book_txt(file_path)
     book_word_count = split_count(book_string)
     letter_dictionary = letter_count(book_string)
@@ -29,12 +33,9 @@ def main(file_path):
     sort_format(letter_dictionary)
 
 
-print(sys.argv)
+if __name__ == "__main__":
+    if len(sys.argv) != 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
 
-len_sys = len(sys.argv)
-
-if len_sys != 2:
-    print("Usage: python3 main.py <path_to_book>")
-    sys.exit(1)
-elif len_sys == 2:
     main(sys.argv[1])
