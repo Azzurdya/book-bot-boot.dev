@@ -1,6 +1,6 @@
 from sre_parse import RANGE
 
-from stats.py import split_count
+from stats import split_count
 
 
 def get_book_txt(file_path):
