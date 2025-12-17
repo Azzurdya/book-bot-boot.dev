@@ -8,7 +8,7 @@ def get_book_txt(file_path):
 
 def main():
     file_path = "books/frankenstein.txt"
-    book_string = get_book_txt(file_path))
+    book_string = get_book_txt(file_path)
 
 
 main()
