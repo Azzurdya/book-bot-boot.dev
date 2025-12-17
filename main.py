@@ -1,3 +1,6 @@
+from sre_parse import RANGE
+
+
 def get_book_txt(file_path):
     book = ""
     with open(file_path) as f:
@@ -6,9 +9,17 @@ def get_book_txt(file_path):
     return book
 
 
+def split_count(book_string):
+    book_string = book_string.split()
+    book_count = len(book_string)
+    return book_count
+
+
 def main():
     file_path = "books/frankenstein.txt"
     book_string = get_book_txt(file_path)
+    book_word_list = split_count(book_string)
+    return book_word_list
 
 
-main()
+print(main())
