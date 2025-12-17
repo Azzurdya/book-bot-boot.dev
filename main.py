@@ -1,5 +1,3 @@
-from sre_parse import RANGE
-
 from stats import split_count
 
 
@@ -13,8 +11,8 @@ def get_book_txt(file_path):
 def main():
     file_path = "books/frankenstein.txt"
     book_string = get_book_txt(file_path)
-    book_word_list = split_count(book_string)
-    return book_word_list
+    book_word_count = split_count(book_string)
+    print(f"Found {book_word_count} total words")
 
 
-print(f"Found {main()} total words")
+main()
