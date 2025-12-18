@@ -19,9 +19,7 @@ def sort_format(letter_dictionary):
 
 
 def main(raw_path):
-    print(raw_path)
     file_path = Path(raw_path).resolve()
-    print(file_path)
     book_string = get_book_txt(file_path)
     book_word_count = split_count(book_string)
     letter_dictionary = letter_count(book_string)
